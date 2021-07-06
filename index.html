@@ -33,12 +33,7 @@
             font-weight: bold;
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
-        .card-footer{
-            
-            background-color: rgb(236, 173, 217);
-            border: cornflowerblue;
-            color: rgb(228, 33, 33);
-        }
+        
       
     </style>
     
@@ -77,7 +72,6 @@
         let temp_feel=city.list[0].main.feels_like
         let clouds=city.list[0].clouds.all
         let wind=city.list[0].wind.speed
-        let country=city.list[0].sys.country
         let html_data=`<div class="card text-center">
   <div class="card-header" ><i class="fas fa-cloud">&nbsp &nbsp</i><i class="far fa-sun"></i>&nbsp &nbsp
     Weather in ${city_name} city &nbsp &nbsp<i class="fas fa-cloud-rain">&nbsp &nbsp</i><i class="fas fa-bolt"></i>
@@ -91,9 +85,7 @@
   
     
   </div>
-  <div class="card-footer">
-   ${country}__${city_name}
-  </div>
+
 </div>`
 document.querySelector("#result").innerHTML=html_data
 
